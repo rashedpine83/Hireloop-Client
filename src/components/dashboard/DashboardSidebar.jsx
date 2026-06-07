@@ -1,0 +1,73 @@
+import {
+  Bell,
+  Briefcase,
+  Envelope,
+  Gear,
+  House,
+  LayoutSideContent,
+  Magnifier,
+  Person,
+} from "@gravity-ui/icons";
+import { Button, Drawer } from "@heroui/react";
+import Link from "next/link";
+
+export function DashboardSidebar() {
+  const navItems = [
+    { icon: House, href: "/dashboard/recruiter", label: "Home" },
+    { icon: Magnifier, href: "/dashboard/recruiter/jobs", label: "Jobs" },
+    {
+      icon: Bell,
+      href: "/dashboard/recruiter/jobs/new",
+      label: "Post a Job",
+    },
+    {
+      icon: Briefcase,
+      href: "/dashboard/recruiter/company",
+      label: "Company Profile",
+    },
+    { icon: Envelope, href: "/messages", label: "Messages" },
+    { icon: Person, href: "/profile", label: "Profile" },
+    { icon: Gear, href: "/settings", label: "Settings" },
+  ];
+
+  const NavContent = (
+    <nav className="flex flex-col gap-1">
+      {navItems.map((item) => (
+        <Link
+          key={item.label}
+          className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-foreground transition-colors hover:bg-default"
+          type="button"
+          href={item.href}
+        >
+          <item.icon className="size-5 text-muted" />
+          {item.label}
+        </Link>
+      ))}
+    </nav>
+  );
+
+  return (
+    <>
+      <aside className="hidden lg:block h-screen w-64 flex-col  border-r border-default  p-4">
+        {NavContent}
+      </aside>
+      <Drawer>
+        <Button className={"lg:hidden"} variant="secondary">
+          <LayoutSideContent />
+          Sidebar
+        </Button>
+        <Drawer.Backdrop>
+          <Drawer.Content placement="left">
+            <Drawer.Dialog>
+              <Drawer.CloseTrigger />
+              <Drawer.Header>
+                <Drawer.Heading>Navigation</Drawer.Heading>
+              </Drawer.Header>
+              <Drawer.Body>{NavContent}</Drawer.Body>
+            </Drawer.Dialog>
+          </Drawer.Content>
+        </Drawer.Backdrop>
+      </Drawer>
+    </>
+  );
+}
