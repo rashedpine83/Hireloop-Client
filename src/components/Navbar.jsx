@@ -5,14 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { signOut, useSession } from "../lib/auth-client";
 import { Button } from "@heroui/react";
-
 import Image from "next/image";
-
-const navLinks = [
-  { name: "Browse Jobs", href: "/jobs" },
-  { name: "Companies", href: "/companies" },
-  { name: "Pricing", href: "/pricing" },
-];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,6 +16,25 @@ export default function Navbar() {
   const handleSignout = async () => {
     await signOut();
   };
+
+  const navLinks = [
+    { name: "Browse Jobs", href: "/jobs" },
+    { name: "Companies", href: "/companies" },
+    { name: "Pricing", href: "/plans" },
+  ];
+
+  const dashboardLinks = {
+    seeker: "/dashboard/seeker",
+    recruiter: "/dashboard/recruiter",
+    admin: "/dashboard/admin",
+  };
+
+  if (user?.email) {
+    navLinks.push({
+      name: "Dashboard",
+      href: dashboardLinks[user?.role || "seeker"],
+    });
+  }
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0B0B12]/80 backdrop-blur-xl">

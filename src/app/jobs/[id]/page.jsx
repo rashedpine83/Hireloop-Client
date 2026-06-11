@@ -1,6 +1,6 @@
 import React from "react";
 import { getJobById } from "@/lib/api/jobs";
-import { Button, Link } from "@heroui/react";
+import { Link } from "@heroui/react";
 import {
   MapPin,
   Briefcase,
@@ -170,15 +170,14 @@ const Page = async ({ params }) => {
             </div>
           </div>
 
-          {/* Action Button: Apply Routing Link Container */}
-          <Button
-            as={Link}
+          {/* Action Link: Apply Routing Link Container */}
+          <Link
             href={`/jobs/${id}/apply`}
             className="w-full bg-purple-600 hover:bg-purple-500 text-white font-medium py-6 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2"
             endContent={<ArrowUpRight className="w-4 h-4" />}
           >
             Apply For This Job
-          </Button>
+          </Link>
         </aside>
       </div>
     </main>
