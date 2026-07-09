@@ -1,8 +1,8 @@
-import { serverFetch } from "../core/server";
+import { proctectedFetch, serverFetch } from "../core/server";
 import { getUserSession } from "../core/session";
 
 export const getCompanies = async () => {
-  return serverFetch(`/api/companies`);
+  return proctectedFetch(`/api/companies`);
 };
 
 export const getRecruiterCompany = async (recruiterId) => {

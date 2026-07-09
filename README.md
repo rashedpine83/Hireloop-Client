@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💼 HireLoop
 
-## Getting Started
+A modern and responsive MERN Stack job portal that connects job seekers with employers. HireLoop allows users to browse jobs, post job opportunities, apply for positions, and manage applications through a clean and user-friendly interface.
 
-First, run the development server:
+## 🌐 Live Website
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗 https://hireloop-client-cyan.vercel.app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Client Repository
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🔗 https://github.com/rashedpine83/HireLoop-Client
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Server Repository
 
-## Learn More
+🔗 https://github.com/rashedpine83/HireLoop-Server
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📖 Project Overview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+HireLoop is a full-stack job portal built with the MERN Stack. It enables employers to post and manage job listings while allowing job seekers to explore opportunities and apply for suitable positions. The application focuses on providing a smooth, secure, and responsive user experience.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 🔐 Secure user authentication with Firebase Authentication
+- 👨‍💼 Role-based access for employers and job seekers
+- 📝 Create, update, and delete job postings
+- 🔍 Search and filter jobs by category
+- 📄 View detailed job information
+- 📬 Apply for jobs with a simple application process
+- 📱 Fully responsive design for mobile, tablet, and desktop
+- ⚡ Fast and intuitive user interface
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+- Next Js
+- Tailwind CSS
+- HeroUI
+- JavaScript
+- Better Auth Authentication
+- React Icons
+- React toast
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- JWT Authentication
+- CORS
+- Dotenv
+
+---
+
+## 📬 Contact
+
+**Nur Hossain Rashed**
+
+📧 Email: rashedpine83@gmail.com
+
+🌐 GitHub: https://github.com/rashedpine83
+
+---
+
+## ⭐ Support
+
+If you like this project, don't forget to ⭐ star the repository.
