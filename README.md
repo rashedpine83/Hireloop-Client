@@ -58,6 +58,10 @@ HireLoop is a full-stack job portal built with the MERN Stack. It enables employ
 
 ---
 
+## 📸 Screenshot
+
+![Home](./public/images/home.png)
+
 ## 📬 Contact
 
 **Nur Hossain Rashed**
